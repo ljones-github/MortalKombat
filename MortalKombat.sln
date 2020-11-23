@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MortalKombat", "MortalKombat\MortalKombat.csproj", "{B425EB2F-25FF-45DB-BD51-3B1E10E2798E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B425EB2F-25FF-45DB-BD51-3B1E10E2798E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B425EB2F-25FF-45DB-BD51-3B1E10E2798E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B425EB2F-25FF-45DB-BD51-3B1E10E2798E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B425EB2F-25FF-45DB-BD51-3B1E10E2798E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35E3C900-6DBE-4FCC-AC27-12A1589C3078}
+	EndGlobalSection
+EndGlobal
