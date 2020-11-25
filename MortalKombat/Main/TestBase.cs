@@ -31,18 +31,26 @@ namespace MortalKombat.Main
             if(myBrowser.Equals(BrowserType.Chrome))
             {
                 driver = new ChromeDriver();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(5000);
+                driver.Manage().Window.Maximize();
             }
             else if(myBrowser.Equals(BrowserType.Firefox))
             {
                 driver = new FirefoxDriver();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(5000);
+                driver.Manage().Window.Maximize();
             }
             else if(myBrowser.Equals(BrowserType.InternetExplorer))
             {
                 driver = new InternetExplorerDriver();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(5000);
+                driver.Manage().Window.Maximize();
             }
             else
             {
                 driver = new SafariDriver();
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(5000);
+                driver.Manage().Window.Maximize();
             }
 
             return driver;

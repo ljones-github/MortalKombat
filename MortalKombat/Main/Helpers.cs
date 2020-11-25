@@ -4,6 +4,7 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,11 @@ namespace MortalKombat.Main
             {
                 s.KeyDown(Keys.Control).Click(e).Build().Perform();
             }
+        }
+
+        public static log4net.ILog initLog([CallerFilePath]string fileName = "")
+        {
+            return log4net.LogManager.GetLogger(fileName);
         }
     }
 }
