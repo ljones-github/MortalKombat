@@ -32,7 +32,8 @@ namespace MortalKombat.Main
         protected internal IWebElement languageChoice;
         protected internal IWebElement mkSupport => TestBase.driver.FindElement(By.CssSelector(".nav-link.support"));
         protected internal IWebElement loginButton => TestBase.driver.FindElement(By.CssSelector(".player-one.d-flex"));
-        protected internal SelectElement gameInfo => new SelectElement(TestBase.driver.FindElement(By.CssSelector("#navbarDropdown")));
+        protected internal IWebElement gameInfo => TestBase.driver.FindElement(By.CssSelector("#navbarDropdown"));
+
 
         public MortalKombatHeader() => PageFactory.InitElements(TestBase.driver, this); 
 
@@ -43,24 +44,27 @@ namespace MortalKombat.Main
             {
                 log.Debug("Attempting to click on element");
                 mortalKombatHome.Click();
+                System.Threading.Thread.Sleep(2000);
                 log.Info("Button successfully clicked");
             }
             catch (Exception e)
             {
                 log.Error($"Class: {m.ReflectedType.Name} || Method: {m.Name} || Error: {e}");
             }
-
-            Assert.That(TestBase.driver.Url == "https://www.mortalkombat.com");
+            Console.WriteLine(TestBase.driver.Url);
+            Assert.That(TestBase.driver.Url == "https://www.mortalkombat.com/");
 
         }
-        public void selectLanguage(String language = "English")
+        public void selectLanguage(String languageSelect = "en-US")
         {
             m = MethodBase.GetCurrentMethod();
-            IList<IWebElement> languageFlags = TestBase.driver.FindElements(By.XPath("//i[@data-v-6aa7de64='']"));
+            Actions s = new Actions(TestBase.driver);
+            s.Click(language).Build().Perform();
+            IList<IWebElement> languageFlags = TestBase.driver.FindElements(By.XPath("//li[@data-v-6aa7de64='']/a"));
             List<string> languages = new List<string>();
             foreach(IWebElement lang in languageFlags)
             {
-                if(lang.Text.Contains(language))
+                if(lang.GetAttribute("hreflang").Contains(languageSelect))
                 {
                     languageChoice = lang;
                     log.Info($"Language {language} was found.");
@@ -74,25 +78,41 @@ namespace MortalKombat.Main
                 Assert.That(false);
             }
 
+            try
+            {
+                log.Debug("Attempting to click on element");
+                s.Click(languageChoice).Build().Perform();
+                System.Threading.Thread.Sleep(3000);
+                log.Info("Successfully clicked on element");
+            }
+            catch(Exception e)
+            {
+                log.Error($"Class: {m.ReflectedType.Name} || Method: {m.Name} || Error: {e}");
+            }
+
+            TestBase._takeFullScreenshot(m.Name);
             
         }
 
         public void selectGameInfo(int index)
         {
             m = MethodBase.GetCurrentMethod();
-            gameInfo.selectOption(index);
-            Assert.That(gameInfo.SelectedOption.GetAttribute("index") == index.ToString()); 
+            Actions s = new Actions(TestBase.driver);
+            s.Click(gameInfo).Build().Perform();
+            IWebElement dropDown = TestBase.driver.FindElement(By.XPath("//div[contains(@class,'dropdown-menu')]"));
+            IList<IWebElement> options = dropDown.FindElements(By.TagName("a"));
+            Assert.That(options.dropDownHelp(index).GetAttribute("href").Contains("mortalkombat"));
+            IWebElement option = options.dropDownHelp(index);
+            option.Click();
+            TestBase._takeFullScreenshot(m.Name);
+            //TestBase.takeScreenshot(m.Name);
+            //s.Click(option).Build().Perform();
         }
 
         public void socialMediaCheck()
         {
             m = MethodBase.GetCurrentMethod();
-            Actions s = new Actions(TestBase.driver);
-            foreach(IWebElement link in socialMedia)
-            {
-                Assert.That(TestBase.verifyUrlConnection(link.GetAttribute("href"), log));
-                s.KeyDown(Keys.Control).Click(link).Build().Perform();
-            }
+            socialMedia.openAllLinks(log);
             IReadOnlyList<String> windows = TestBase.driver.WindowHandles;
 
             foreach(String window in windows)
@@ -110,40 +130,47 @@ namespace MortalKombat.Main
             IJavaScriptExecutor je = (IJavaScriptExecutor)TestBase.driver;
             string script = "window.scrollBy(0,500)";
             je.ExecuteScript(script);
+            TestBase.driver.Manage().Cookies.DeleteAllCookies();
+            WebDriverWait myWait = new WebDriverWait(TestBase.driver, TimeSpan.FromSeconds(5));
+            myWait.Until(ExpectedConditions.ElementToBeClickable(TestBase.driver.FindElement(By.CssSelector(".emailLaunchButton.enter"))));
             neverMissUpdate = TestBase.driver.FindElement(By.CssSelector(".emailLaunchButton.enter"));
             Actions s = new Actions(TestBase.driver);
-            TestBase.driver.Manage().Cookies.DeleteAllCookies();
+            System.Threading.Thread.Sleep(3000);
             s.Click(neverMissUpdate).Build().Perform();
+            System.Threading.Thread.Sleep(3000);
             SelectElement monthDropdown = new SelectElement(TestBase.driver.FindElement(By.CssSelector("#AgeGateMonth")));
             SelectElement dayDropDown = new SelectElement(TestBase.driver.FindElement(By.CssSelector("#AgeGateDay")));
             SelectElement yearDropDown = new SelectElement(TestBase.driver.FindElement(By.CssSelector("#AgeGateYear")));
+            IWebElement confirmAge = TestBase.driver.FindElement(By.XPath("//button[contains(@class, 'confirm')]"));
 
             monthDropdown.SelectByText(month);
             dayDropDown.SelectByText(day);
             yearDropDown.SelectByText(year);
+            confirmAge.Click();
 
+            System.Threading.Thread.Sleep(3000);
+
+           int ageLimiter = DateTime.Now.Year - Int32.Parse(year);
             int count = 0;
-            do
-            {
-                if (TestBase.driver.FindElement(By.CssSelector(".age-denied")).Displayed)
-                {
-                    Console.WriteLine(TestBase.driver.FindElement(By.CssSelector(".age-denied")).Text);
-                }
-                else
-                {
-                    s.Click(neverMissUpdate).Build().Perform();
-                    log.Debug("Attempting to send keys");
-                    s.SendKeys(TestBase.driver.FindElement(By.CssSelector("#email")), "uyuvuuiiub").Build().Perform();
-                    log.Info("Keys sent successfully");
-                    s.Click(TestBase.driver.FindElement(By.XPath("//button[contains(@class,'btn-gold')]"))).Build().Perform();
-                    System.Threading.Thread.Sleep(2000);
+            
+            s.Click(neverMissUpdate).Build().Perform();
 
-                    //Count will ensure that page has been refreshed and tested again as the choices made are saved in the cookies
-                    TestBase.driver.Navigate().Refresh();
-                    count++;
-                }
+            // This condition is established so that we have a baseline for which to search in either scenario age >= 21 and age < 21
+            if (ageLimiter >= 21)
+            {
+                log.Debug("Attempting to send keys");
+                s.SendKeys(TestBase.driver.FindElement(By.CssSelector("#email")), "ouhiyoihoih").Build().Perform();
+                log.Info("Keys sent successfully");
+                s.Click(TestBase.driver.FindElement(By.XPath("//button[contains(@class,'btn-gold')]"))).Build().Perform();
+                System.Threading.Thread.Sleep(2000);
+                TestBase.takeScreenshot(m.Name);
             }
-            while (count < 2);
+            else 
+            {
+                IWebElement ageDenied = TestBase.driver.FindElement(By.CssSelector(".age-denied"));
+                Console.WriteLine(ageDenied.Text);
+            }
+
         }
     }
 }

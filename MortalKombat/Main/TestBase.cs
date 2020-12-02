@@ -70,7 +70,7 @@ namespace MortalKombat.Main
         {
             //This is using the Noksa.WebDriver.ScreenshotsExtensions nuget package
             VerticalCombineDecorator vcd = new VerticalCombineDecorator(new ScreenshotMaker());
-            driver.TakeScreenshot(vcd).ToMagickImage().ToBitmap().Save("C:\\Users\\ljone\\source\\repos\\SeleniumUno\\SeleniumUno\\Screenshot(s)\\" + fileName + "__" + additional + ".png");
+            driver.TakeScreenshot(vcd).ToMagickImage().ToBitmap().Save("C:\\Users\\ljone\\source\\repos\\MortalKombat\\MortalKombat\\Resources\\Screenshot(s)\\" + fileName + "__" + additional + ".png");
 
             // This would direct you to the temp folder. 
             Console.WriteLine(Directory.GetCurrentDirectory());

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -12,24 +13,30 @@ namespace MortalKombat.Main
 {
     public static class Helpers
     {
-        public static void selectOption(this SelectElement selector, int index)
+        public static IWebElement dropDownHelp(this IList<IWebElement> dropdown, int index)
         {
-            if (selector.Options.Count <= index - 1 || index < 0)
+            IWebElement returnElement = null;
+            if (dropdown.Count <= index - 1 || index < 0)
             {
                 index = 0;
+                returnElement = dropdown.ElementAt(index);
             }
             else
             {
-                selector.SelectByIndex(index);
+                dropdown.ElementAt(index);
             }
-        }
 
-        public static void openAllLinks(this IList<IWebElement> list)
+            return returnElement;
+        }
+        
+        public static void openAllLinks(this IList<IWebElement> list, log4net.ILog log)
         {
             Actions s = new Actions(TestBase.driver);
-            foreach(IWebElement e in list)
+
+            foreach (IWebElement link in list)
             {
-                s.KeyDown(Keys.Control).Click(e).Build().Perform();
+                Assert.That(TestBase.verifyUrlConnection(link.GetAttribute("href"), log));
+                s.KeyDown(Keys.Control).Click(link).Build().Perform();
             }
         }
 

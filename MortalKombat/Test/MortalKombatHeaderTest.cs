@@ -47,7 +47,7 @@ namespace MortalKombat.Test
         {
             m = MethodBase.GetCurrentMethod();
             MortalKombatHeader mkh = new MortalKombatHeader();
-            mkh.selectLanguage("Nederlands");
+            mkh.selectLanguage("es-MX");
         }
 
         [Test]
