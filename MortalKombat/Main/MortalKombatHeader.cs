@@ -192,5 +192,28 @@ namespace MortalKombat.Main
             Assert.That(TestBase.driver.Url.Contains("roster"));
             TestBase._takeFullScreenshot(m.Name);
         }
+
+        public void mkKollective()
+        {
+            m = MethodBase.GetCurrentMethod();
+            Actions s = new Actions(TestBase.driver);
+            try
+            {
+                log.Debug("Attempting to click on element");
+                s.Click(mkCollective).Build().Perform();
+                System.Threading.Thread.Sleep(2000);
+                log.Info("Successfully clicked on element");
+            }
+            catch(Exception e)
+            {
+                log.Error($"Class: {m.ReflectedType.Name} || Method: {m.Name} || Error: {e}");
+            }
+
+            Assert.That(TestBase.driver.Url.Contains("kollective"));
+
+
+            TestBase.takeScreenshot(m.Name);
+
+        }
     }
 }

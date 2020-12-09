@@ -66,6 +66,14 @@ namespace MortalKombat.Test
             mkh.mkRoster();
         }
 
+        [Test]
+        public void _mkKollect()
+        {
+            m = MethodBase.GetCurrentMethod();
+            MortalKombatHeader mkh = new MortalKombatHeader();
+            mkh.mkKollective();
+        }
+
         [TearDown]
         public void _tearDown()
         {
