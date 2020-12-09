@@ -172,5 +172,25 @@ namespace MortalKombat.Main
             }
 
         }
+
+        public void mkRoster()
+        {
+            m = MethodBase.GetCurrentMethod();
+            Actions s = new Actions(TestBase.driver);
+            try
+            {
+                log.Debug("Attempting to click on element");
+                s.Click(roster).Build().Perform();
+                log.Info("Successfully clicked on element");
+            }
+            catch (Exception e)
+            {
+                log.Error($"Class: {m.ReflectedType.Name} Method: {m.Name} Error: {e}");
+            }
+
+            System.Threading.Thread.Sleep(2500);
+            Assert.That(TestBase.driver.Url.Contains("roster"));
+            TestBase._takeFullScreenshot(m.Name);
+        }
     }
 }
