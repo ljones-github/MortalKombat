@@ -6,9 +6,12 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace MortalKombat.Test
+
 {
-    class MortalKombatHeaderTest
+
+    class MortalKombatHeaderTest 
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -72,6 +75,35 @@ namespace MortalKombat.Test
             m = MethodBase.GetCurrentMethod();
             MortalKombatHeader mkh = new MortalKombatHeader();
             mkh.mkKollective();
+        }
+
+        [Test]
+        public void _mkCommunity()
+        {
+            m = MethodBase.GetCurrentMethod();
+            MortalKombatHeader mkh = new MortalKombatHeader();
+            mkh.mkCommunity();
+            TestBase.takeScreenshot(m.Name);
+            
+        }
+
+        [Test]
+        public void _mkMedia()
+        {
+            m = MethodBase.GetCurrentMethod();
+            MortalKombatHeader mkh = new MortalKombatHeader();
+            mkh.mkMedia();
+            TestBase._takeFullScreenshot(m.Name);
+
+        }
+
+        [Test]
+        public void _mkEsports()
+        {
+            m = MethodBase.GetCurrentMethod();
+            MortalKombatHeader mkh = new MortalKombatHeader();
+            mkh.mkEsports();
+            TestBase._takeFullScreenshot(m.Name);
         }
 
         [TearDown]

@@ -1,0 +1,26 @@
+17:36:56,050 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:36:59,742 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:37:02,551 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:37:02,697 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:37:03,590 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:38:44,393 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:38:47,973 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:38:50,787 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:38:50,891 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - The North American League schedule is System.Collections.Generic.Dictionary`2[System.String,System.String]
+17:38:50,895 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:38:51,836 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:51:00,063 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:51:05,645 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:51:08,456 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:51:08,591 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - The North American Event info is as follows: /m
+17:51:08,598 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: December 19 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,602 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: January 16 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,605 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: February 6 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,610 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: February 27 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,614 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: March 20 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,618 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: April 10 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,621 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: May 1 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,626 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: May 22 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:51:08,630 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: June 5–6 Event: NORTH AMERICAN LEAGUE: REGIONAL FINALS
+17:51:18,331 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:51:19,536 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.

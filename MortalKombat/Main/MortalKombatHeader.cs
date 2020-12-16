@@ -9,7 +9,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+
 [assembly: log4net.Config.XmlConfigurator(Watch = true)]
+
 namespace MortalKombat.Main
 {
     class MortalKombatHeader
@@ -214,6 +216,91 @@ namespace MortalKombat.Main
 
             TestBase.takeScreenshot(m.Name);
 
+        }
+
+        public void mkCommunity()
+        {
+            m = MethodBase.GetCurrentMethod();
+            Actions s = new Actions(TestBase.driver);
+            try
+            {
+                log.Debug("Attempting to click on element");
+                s.Click(community).Build().Perform();
+                System.Threading.Thread.Sleep(2500);
+                log.Info("Successfully clicked on element");
+            }
+            catch(Exception e)
+            {
+                log.Error($"Class: {m.DeclaringType.Name} || Method: {m.Name} || Error: {e}");
+            }
+
+            Assert.That(TestBase.driver.Url.Contains("community"));
+        }
+
+        public void mkMedia()
+        {
+            m = MethodBase.GetCurrentMethod();
+            Actions s = new Actions(TestBase.driver);
+            try
+            {
+                log.Debug("Attempting to click on element");
+                s.Click(media).Build().Perform();
+                System.Threading.Thread.Sleep(2500);
+                log.Info("Successfully clicked on element");
+            }
+            catch (Exception e)
+            {
+                log.Error($"Class: {m.DeclaringType.Name} || Method: {m.Name} || Error: {e}");
+            }
+
+            Assert.That(TestBase.driver.Url.Contains("media"));
+        }
+
+        public void mkEsports()
+        {
+            m = MethodBase.GetCurrentMethod();
+            Actions s = new Actions(TestBase.driver);
+            try
+            {
+                log.Debug("Attempting to click on element");
+                s.Click(esports).Build().Perform();
+                System.Threading.Thread.Sleep(2500);
+                log.Info("Successfully clicked on element");
+            }
+            catch (Exception e)
+            {
+                log.Error($"Class: {m.DeclaringType.Name} || Method: {m.Name} || Error: {e}");
+            }
+
+            Assert.That(TestBase.driver.Url.Contains("esports"));
+
+            Dictionary<string, string> events = new Dictionary<string, string>();
+            IReadOnlyCollection<IWebElement> eventDatesEle = TestBase.driver.FindElements(By.XPath("//td[@class='date']"));
+            IReadOnlyCollection<IWebElement> eventLeagueEle = TestBase.driver.FindElements(By.XPath("//td[contains(@class,'scheduleEventNameCol')]"));
+            List<string> eventDates = new List<string>();
+            List<string> eventLeague = new List<string>();
+
+            foreach (IWebElement e in eventDatesEle)
+            {
+                eventDates.Add(e.Text);
+            }
+
+            foreach(IWebElement e in eventLeagueEle)
+            {
+                eventLeague.Add(e.Text);
+            }
+
+            for(int i = 0; i < eventDates.Count; i++)
+            {
+                events.Add(eventDates.ElementAt(i), eventLeague.ElementAt(i));
+            }
+
+            log.Info("The North American Event info is as follows: ");
+
+            foreach (KeyValuePair<string,string> dict in events)
+            {
+                log.Info($"Date: {dict.Key} Event: {dict.Value}");
+            }
         }
     }
 }
