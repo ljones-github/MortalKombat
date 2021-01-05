@@ -24,3 +24,113 @@
 17:51:08,630 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: June 5–6 Event: NORTH AMERICAN LEAGUE: REGIONAL FINALS
 17:51:18,331 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
 17:51:19,536 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:36:28,529 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:36:35,634 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:36:38,464 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:36:38,959 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:36:39,640 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:36:43,120 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:36:47,101 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:36:49,895 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:36:49,998 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - The North American Event info is as follows: 
+17:36:50,002 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: January 16 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,006 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: February 6 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,010 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: February 27 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,014 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: March 20 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,017 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: April 10 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,020 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: May 1 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,024 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: May 22 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:50,027 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: June 5–6 Event: NORTH AMERICAN LEAGUE: REGIONAL FINALS
+17:36:50,032 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Date: December 19 Event: NORTH AMERICAN LEAGUE EAST & WEST
+17:36:59,963 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:37:00,652 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:37:04,097 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:37:09,255 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:37:11,639 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:37:12,213 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:37:12,883 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:37:16,370 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:37:22,755 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:37:25,575 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:37:31,145 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:37:31,887 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:37:35,336 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:37:39,362 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:37:39,657 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:37:45,564 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:37:46,369 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:37:49,823 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:38:06,511 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to send keys
+17:38:07,385 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Keys sent successfully
+17:38:11,187 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:38:11,990 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:38:15,452 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:38:30,250 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:38:30,943 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:38:34,401 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:38:40,805 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:38:43,562 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Button successfully clicked
+17:38:43,583 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:38:44,364 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+17:38:47,839 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+17:38:54,794 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Language Element (id = a1eaae33-f219-4347-8df5-7796869ba318) was found.
+17:38:54,910 [NonParallelWorker] DEBUG MortalKombat.Main.MortalKombatHeader - Attempting to click on element
+17:38:58,465 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Successfully clicked on element
+17:39:10,696 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+17:39:11,518 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:30:57,534 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:31:03,879 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:31:04,873 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:31:05,379 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:31:06,339 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:31:07,084 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:31:07,878 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:34:39,140 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:34:45,572 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:34:46,385 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:34:46,804 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:34:47,713 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:34:48,389 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:34:49,278 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:37:04,830 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:37:11,780 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:37:24,059 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:37:24,765 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:38:46,865 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:38:52,023 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:38:52,890 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:38:56,304 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:38:59,606 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:43:53,728 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:43:57,798 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:43:58,730 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:44:02,533 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:44:06,862 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:44:19,038 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:44:22,394 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:44:23,230 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:44:26,724 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:44:29,768 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:46:30,821 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:46:35,018 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:46:35,959 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:46:43,381 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:46:45,388 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:46:55,299 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:47:00,808 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:47:01,615 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:47:08,954 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:47:13,595 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:50:10,069 [15] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:50:15,957 [15] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:50:16,975 [15] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:55:45,871 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:55:51,635 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:55:53,120 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:56:02,521 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:56:17,585 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.
+19:57:56,545 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to navigate to url: https://www.mortalkombat.com
+19:58:02,363 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:58:03,282 [NonParallelWorker] INFO MortalKombat.Main.MortalKombatHeader - Url status is OK
+19:59:25,878 [NonParallelWorker] DEBUG MortalKombat.Test.MortalKombatHeaderTest - Attempting to close the driver
+19:59:31,595 [NonParallelWorker] INFO MortalKombat.Test.MortalKombatHeaderTest - Driver closed successfully.

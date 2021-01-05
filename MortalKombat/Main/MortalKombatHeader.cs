@@ -27,6 +27,12 @@ namespace MortalKombat.Main
         protected internal IWebElement media => TestBase.driver.FindElement(By.XPath("//div[@id='navbarSupportedContent']/ul/li[5]"));
         protected internal IWebElement esports => TestBase.driver.FindElement(By.XPath("//div[@id='navbarSupportedContent']/ul/li[6]"));
         protected internal IWebElement buyNowHeader => TestBase.driver.FindElement(By.XPath("//ul[@class='navbar-nav']/li/a"));
+        protected internal IWebElement twitch => TestBase.driver.FindElement(By.XPath("//a[contains(@href,'twitch')]"));
+        protected internal IWebElement discord => TestBase.driver.FindElement(By.XPath("//a[contains(@href,'discord')]"));
+        protected internal IWebElement youtube => TestBase.driver.FindElement(By.XPath("//a[contains(@href,'youtube')]"));
+        protected internal IWebElement facebook => TestBase.driver.FindElement(By.XPath("//a[contains(@href,'facebook')]"));
+        protected internal IWebElement twitter => TestBase.driver.FindElement(By.XPath("//a[contains(@href,'twitter')]"));
+        protected internal IWebElement instagram => TestBase.driver.FindElement(By.XPath("//a[contains(@href,'gram')]"));
         protected internal IList<IWebElement> socialMedia => TestBase.driver.FindElements(By.XPath("//div[@class='social']/a"));
         
         protected internal IWebElement neverMissUpdate;
@@ -301,6 +307,47 @@ namespace MortalKombat.Main
             {
                 log.Info($"Date: {dict.Key} Event: {dict.Value}");
             }
+        }
+
+        public void mkSocialMedia()
+        {
+            m = MethodBase.GetCurrentMethod();
+            //Verifying connection for social media links
+            Assert.That(TestBase.verifyUrlConnection(twitch.GetAttribute("href"), log));
+            Assert.That(TestBase.verifyUrlConnection(discord.GetAttribute("href"), log));
+            //Assert.That(TestBase.verifyUrlConnection(youtube.GetAttribute("href"), log));
+           // Assert.That(TestBase.verifyUrlConnection(facebook.GetAttribute("href"), log));
+            //Assert.That(TestBase.verifyUrlConnection(twitter.GetAttribute("href"), log));
+           // Assert.That(TestBase.verifyUrlConnection(instagram.GetAttribute("href"), log));
+
+            List<IWebElement> social = new List<IWebElement>();
+            social.Add(twitch);
+            social.Add(discord);
+            social.Add(youtube);
+            social.Add(facebook);
+            social.Add(twitter);
+            social.Add(instagram);
+
+            foreach (IWebElement e in social)
+            {
+                System.Threading.Thread.Sleep(1000);
+                e.SendKeys(Keys.Control + Keys.Return);
+               // s.MoveToElement(e).KeyDown(Keys.Control).Click(e).Build().Perform();
+            }
+
+            IReadOnlyCollection<String> windows = TestBase.driver.WindowHandles;
+            int count = 0;
+
+            foreach (String window in windows)
+            {
+                TestBase.driver.SwitchTo().Window(window);
+                TestBase._takeFullScreenshot(count.ToString());
+                count++;
+
+            }
+
+
+
         }
     }
 }

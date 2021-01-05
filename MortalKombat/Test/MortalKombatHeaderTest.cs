@@ -106,6 +106,14 @@ namespace MortalKombat.Test
             TestBase._takeFullScreenshot(m.Name);
         }
 
+        [Test]
+        public void _mkSocial()
+        {
+            m = MethodBase.GetCurrentMethod();
+            MortalKombatHeader mkh = new MortalKombatHeader();
+            mkh.mkSocialMedia();
+        }
+
         [TearDown]
         public void _tearDown()
         {
